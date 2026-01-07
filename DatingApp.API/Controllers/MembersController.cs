@@ -10,7 +10,7 @@ namespace DatingApp.API.Controllers
     [ApiController]
     public class MembersController : ControllerBase
     {
-        [HttpGet]  // localhost:5000/api/members
+        [HttpGet]  // localhost:5001/api/members
         public async Task<ActionResult<List<AppUser>>> GetMembers(AppDbContext context)
         {
             var members = await context.Users.ToListAsync();
