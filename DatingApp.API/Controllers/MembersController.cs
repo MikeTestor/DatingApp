@@ -1,14 +1,13 @@
 using DatingApp.API.Data;
 using DatingApp.API.Models;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace DatingApp.API.Controllers
-{
-    [Route("api/[controller]")]
-    [ApiController]
-    public class MembersController : ControllerBase
+{   
+    [Authorize] 
+    public class MembersController : ControllerApiBase
     {
         [HttpGet]  // localhost:5000/api/members
         public async Task<ActionResult<List<AppUser>>> GetMembers(AppDbContext context)

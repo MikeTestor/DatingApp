@@ -2,10 +2,10 @@
 
 #nullable disable
 
-namespace DatingApp.API.Migrations
+namespace Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
